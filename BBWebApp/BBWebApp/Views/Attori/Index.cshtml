@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BBWebApp.Models.Attore>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome attore</th>
+            <th>Cognome Attore</th>
+            <th>Nazionalità</th>
+            <th>Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nazionalita)
+            </td>
+            <td>
+                <img src="
+                @Html.DisplayFor(modelItem => item.urlFoto)
+                " alt="foto attore">
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

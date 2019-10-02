@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BBWebApp.Models.Genere>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Generi disponibili</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
